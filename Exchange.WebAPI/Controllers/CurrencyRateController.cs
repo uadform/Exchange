@@ -50,7 +50,6 @@ namespace Exchange.WebAPI.Controllers
         /// <response code="500">If an internal server error occurs.</response>
         [HttpGet("{code}")]
         [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(CurrencyRate))]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> GetCurrencyRateByCode(string code)
         {
